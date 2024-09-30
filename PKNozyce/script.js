@@ -17,5 +17,9 @@ function losowanie(){
     return mozliwosci[a]
 }
 
-let odp = losowanie()
-document.write(odp.name + "<img src=" + odp.img + "></img>")
+function wybor(){
+    let odp = losowanie()
+    switch(Mozliwosc.name){
+        case "Papier"
+    }
+}
