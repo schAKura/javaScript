@@ -6,9 +6,9 @@ class Mozliwosc {
 }
 
 const mozliwosci = [
-    new Mozliwosc("Papier", "media/papier.png"),
-    new Mozliwosc("Kamien", "media/kamien.png"),
-    new Mozliwosc("Nozyce", "media/nozyce.png")
+    new Mozliwosc("Papier", "media/papier.jpg"),
+    new Mozliwosc("Kamien", "media/kamien.jpg"),
+    new Mozliwosc("Nozyce", "media/nozyce.jpg")
 ]
 
 
@@ -17,9 +17,19 @@ function losowanie(){
     return mozliwosci[a]
 }
 
-function wybor(){
+document.write("<h1>PAPIER, KAMIEN, NOŻYCE</h1>")
+
+function wybor(wyborN){
     let odp = losowanie()
-    switch(Mozliwosc.name){
-        case "Papier"
-    }
+    let h2Wynik = document.getElementById("1")
+    if(wyborN ==odp.name)
+        {
+          h2Wynik.innerHTML = "Remis. Komputer też wybrał: " + wyborN
+        }
+        else if(wyborN==='Papier' && odp.name==='Kamien' || wyborN==='Kamien' && odp.name==='Nozyce'|| wyborN==='Nozyce' && odp.name==='Papier' )
+        {
+            h2Wynik.innerHTML = "Wygrałeś. Komputer wybrał: "+ odp.name
+        }else{
+            h2Wynik.innerHTML = "Przegrałeś. Komputer wybrał: "+odp.name
+        }
 }
