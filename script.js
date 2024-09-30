@@ -1,14 +1,13 @@
 class Mozliwosc {
     constructor(name1, image1) {
         this.name = name1;
-        this.img = image1;
     }
 }
 
 const mozliwosci = [
-    new Mozliwosc("Papier", "media/papier.jpg"),
-    new Mozliwosc("Kamien", "media/kamien.jpg"),
-    new Mozliwosc("Nozyce", "media/nozyce.jpg")
+    new Mozliwosc("Papier"),
+    new Mozliwosc("Kamien"),
+    new Mozliwosc("Nozyce")
 ]
 
 
